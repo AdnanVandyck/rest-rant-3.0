@@ -11,20 +11,22 @@ app.set('views', __dirname + '/views')
 app.set('view engine', 'jsx')
 app.engine('jsx', require('express-react-views').createEngine())
 
-// CONTROLLER MIDDLEWARE
-const placesController = require('./controllers/places_controller')
+// // CONTROLLER MIDDLEWARE
+// Places
+const placesController = require('./controllers/places_controller.js')
 app.use('/places', placesController)
 
 // ROUTES
 
-//HOME PAGE
+//HOMEPAGE
 app.get('/', (req, res) => {
-    res.render('home')
+    res.send('Welcome to an Awesome App about Restaurants!')
 })
 
 app.get('*', (req, res) => {
     res.render('error404')
 })
+
 
 
 

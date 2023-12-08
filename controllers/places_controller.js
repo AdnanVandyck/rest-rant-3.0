@@ -1,12 +1,16 @@
 const express = require('express')
 const places = express.Router()
-const Place = require('../models/place')
+const Place = require('../models/place.js')
 
 
 
 //INDEX
 places.get('/', (req,res) => {
-    res.render('index')
+    res.render('index', 
+    {
+        places: Place
+    }
+    )
 })
 
 // SHOW(READ)

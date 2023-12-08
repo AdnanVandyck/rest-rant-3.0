@@ -1,7 +1,7 @@
 const React = require('react')
 const Default = require('./layouts/default')
 
-function index () {
+function Index ({ places }) {
     return (
         <Default>
             <main>
@@ -11,4 +11,4 @@ function index () {
     )
 }
 
-module.exports = index
+module.exports = Index
