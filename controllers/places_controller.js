@@ -14,7 +14,9 @@ places.get('/', (req,res) => {
 
 //NEW
 places.get('/new', (req, res) => {
-    res.render('new')
+    res.render('new', {
+
+    })
   })
 
 
