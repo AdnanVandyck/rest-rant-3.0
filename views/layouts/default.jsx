@@ -4,7 +4,7 @@ function Default (html) {
     return (
         <html>
             <head>
-                <title>Title</title>
+                <title>REST-RANT</title>
             </head>
             <body>
                 {html.children}
