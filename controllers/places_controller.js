@@ -3,6 +3,14 @@ const places = express.Router()
 const Place = require('../models/place.js')
 
 
+// CREATE
+places.post('/', (req, res) => {
+    Place.push(req.body)
+    res.redirect('/places')
+})
+
+
+
 //INDEX
 places.get('/', (req,res) => {
     res.render('index', 
