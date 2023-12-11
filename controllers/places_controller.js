@@ -25,7 +25,8 @@ places.post('/', (req, res) => {
 places.get('/', (req,res) => {
     res.render('index', 
     {
-        places: Place
+        places: Place,
+        title: 'Index Page'
     }
     )
 })
@@ -41,7 +42,13 @@ places.get('/new', (req, res) => {
 
 // SHOW(READ)
 places.get('/:arrayIndex', (req, res) => {
-    res.send(Place[req.params.arrayIndex])
+    if (Place[req.params.arrayIndex]) {
+        res.render('Show', {
+            place: Place[req.params.arrayIndex]
+        })
+    } else {
+        res.send('error404')
+    }
 })
 
 module.exports = places
