@@ -6,9 +6,9 @@ function home () {
         <Default>
             <main>
                 <h1>REST-Rant</h1>
-                <a href="/places">
+                {/* <a href="/places">
                 <button className="btn-primary">Places Page</button>
-                </a>
+                </a> */}
                 <div>
                     <img src="images/bbq-plate.jpg" alt="BBQ Plate" />
                 </div>

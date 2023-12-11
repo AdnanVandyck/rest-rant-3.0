@@ -5,7 +5,7 @@ function New () {
    
     return (
         <Default>
-                            <h1>Add a New Place</h1>
+            <h1>Add a New Place</h1>
             <main>
                 <form method= "POST" action="/places">
                     <div className="form-group">
